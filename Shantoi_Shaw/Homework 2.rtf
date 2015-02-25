@@ -1,0 +1,252 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1344\cocoasubrtf720
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 HelveticaNeue;\f2\fnil\fcharset0 Cambria;
+\f3\froman\fcharset0 TimesNewRomanPSMT;}
+{\colortbl;\red255\green255\blue255;\red38\green38\blue38;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}}{\leveltext\leveltemplateid1\'01\'00;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid1}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0\b\fs24 \cf0 1). What makes SQL a Nonprocedural Language? 
+\b0 \
+     \
+ SQL is a nonprocedural language because a user has to describe what they want done, and the SQL compiler automatically generates a procedure to navigate the database to complete the given task. Its nonprocedural because it requires the programmer to specify what the program should do rather than providing sequential steps indicating how the program should perform. \
+\
+
+\b 2). How can you tell whether a database is truly relational? \
+      \
+
+\b0 A relational database is one that presents information in tables with rows and columns. First row is the unique key, and all the other rows are foreign keys , that is how they relate to other tables. \
+\
+
+\b 3). What can you do with SQL?
+\b0 \
+	\
+SQL lets you access and manipulate databases. SQL can execute queries against databases, retrieve data from a database. SQL can insert records in a database, can update records in a database, can delete records from databases, create new databases and store procedures in a database. Along with many more things. \
+\
+
+\b 4). Name the process that separates data into distinct, unique sets. 
+\b0 \
+	\
+Normalization is the process used to separate data into distinct, unique sets. \
+\
+
+\b 5). 
+\f1 \cf2 \expnd0\expndtw0\kerning0
+Do the following statements return the same or different output:\
+\pard\pardeftab720
+\cf2 	SELECT * FROM ARRESTS; select * from arrests;
+\b0 \
+	\
+It returns the same output because it is not case sensitive. 
+\b \
+\
+6). None of the following queries work. Why not?\
+     select *; Select* from checks Select amount name payee From checks;
+\b0 \
+	\
+They do not work because \'93select *\'94 doesn\'92t provide a table. The issue with the second one is simply based on the fact that you cannot have two arguments in one block. 
+\b \
+\
+7). Which of the following SQL statements will work? \
+	select * from checks; select * from checks; select * from checks /
+\b0 \
+	\
+Only the first two select from checks will work because they end with a \'93;\'94 the last one will no because it ended with a \'93/\'93.
+\b \
+\
+Given the Following Questions: \
+\
+1). Write a query to return just the check officerID and TopCharge. \
+    
+\b0  \
+SELECT officerID from  arrests; 
+\b \
+ \
+2). Rewrite the query from exercise 1 so that top charge will appear as the first column in your query results.\
+
+\b0 	\
+SELECT topCharge from arrests; SELECT officerID from  arrests; \
+\
+
+\b 3).
+\b0  
+\b Using the arrest table, write a query to return all the unique topCharges.\
+     \
+
+\b0 SELECT UNIQUE topCharges from arrests; \
+\
+
+\b Using the doubleAgents table to answer the following questions: \
+
+\b0 \
+
+\b 1). Write a query that returns everyone in the database whose last name begins with M.
+\b0 \
+	\
+SELECT LASTNAME varchar(\'91M\'92) from doubleAgents; \
+\
+
+\b 2). Write a query that returns everyone who lives in Illinois with he first name of AL. 
+\b0 \
+    \
+ SELECT  WHERE FIRSTNAME= \'91AL\'92 from doubleAgents WHERE ST= \'91IL\'92; \
+
+\b \
+3). What shorthand could you use instead of WHERE a >= 10 AND a <=30?\
+   \
+  
+\b0 SELECT * a BETWEEN 10 and 30; \
+
+\b \
+4). What will this query return?
+\b0 \
+
+\b SELECT FIRSTNAME FROM DOUBLE_AGENTS WHERE FIRSTNAME = 'AL' AND LASTNAME = 'BULHER';
+\b0 \
+	\
+The query would probably error or return nothing because the table\'92s name is incorrect first off and even if the table was correct there would be no results for AL Bulher. \
+\
+
+\b 5). Using the DOUBLEAGENTS table, write a query that returns the following:\
+
+\b0  	\
+SELECT  WHERE FIRSTNAME= \'91AL\'92 from doubleAgents WHERE ST= \'91IL\'92;\
+\
+\
+
+\b Using the DOUBLEAGENTS table, write a query that returns the following:\
+\
+1). Which function capitalizes the first letter of a character string and makes the rest lowercase?\
+	\
+
+\b0 SELECT INITCAP (\'91character string\'92) from DOUBLEAGENTS;\
+\pard\tx220\tx720\pardeftab720\li720\fi-720
+\ls1\ilvl0
+\fs32 \cf2 \kerning1\expnd0\expndtw0 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720
+\ls1\ilvl0
+\b\fs24 \cf2 2). \expnd0\expndtw0\kerning0
+Which functions are also known by the 
+\i \expnd0\expndtw0\kerning0
+same
+\i0 \expnd0\expndtw0\kerning0
+ name?\
+     \
+ 
+\b0 \expnd0\expndtw0\kerning0
+AGGREGATE Function
+\b \expnd0\expndtw0\kerning0
+\
+\
+3). Will this query work? \
+      SELECT COUNT(LASTNAME) FROM CHARACTERS;
+\b0 \expnd0\expndtw0\kerning0
+\
+     \
+Yes the function will work. \
+\ls1\ilvl0
+\b \expnd0\expndtw0\kerning0
+\
+4). How about this one? \
+	  SELECT SUM(LASTNAME) FROM CHARACTERS
+\b0 \expnd0\expndtw0\kerning0
+\
+    \
+ No it will not work because a \'93;\'94 is missing at the end of the command line. 
+\b \expnd0\expndtw0\kerning0
+\
+\
+5).  Assuming that they are separate columns, which function(s) would splice together FIRSTNAME AND LASTNAME? \
+\
+\ls1\ilvl0
+\b0 \expnd0\expndtw0\kerning0
+CONCAT Function
+\b \expnd0\expndtw0\kerning0
+\
+\
+6). What does the answer 37 mean from the following SELECT? \
+		SELECT COUNT(*) FROM drone_strikes; \
+        \
+\ls1\ilvl0
+\b0 \expnd0\expndtw0\kerning0
+It means the amount of drone_strikes that are in the data. \
+\
+\ls1\ilvl0
+\b \expnd0\expndtw0\kerning0
+7). Will the following statement work? (Hint: Look up substr)\
+     SELECT SUBSTR LASTNAME, 1, 5 FROM NAME_TBL; \
+     \
+\ls1\ilvl0
+\b0 \expnd0\expndtw0\kerning0
+Yes the following statement will work because it identifies what it wants, while specifying where it wants it from, and the table it is located. \
+\
+\pard\pardeftab720\ri720
+
+\f2\b \cf0 \kerning1\expnd0\expndtw0 Marksmanship Table:
+\b0 \
+\
+
+\b 1). Using a table called SHOOTSTATS table, write a query to determine who is or on target less than 25. 
+\b0 \
+\
+SELECT FIRSTNAME and LASTNAME FROM SHOOTSTATS table WHERE hits<25. \
+\
+\ul 2).
+\f1\fs32 \cf2 \ulc2  
+\f2\fs24 \cf0 \ulc0 Using today's OFFICERS table, write a query that will return the following:
+\f3 \ulnone \
+
+\f2        \
+\
+\pard\pardeftab720\li720\ri720
+
+\b \cf0 1). Which clause works just like LIKE(%)? (HINT: Look it up on google.)
+\b0 \
+        \
+Starting with \
+\pard\pardeftab720\ri720
+
+\f3 \cf0 \
+\pard\pardeftab720\li720\ri720
+
+\f2\b \cf0 2). What is the function of the GROUP BY clause, and what other clause does it act like?
+\b0 \
+        \
+The 
+\b GROUP BY
+\b0  Function is used when we are selecting multiple columns from a table with at least one arithmetic operator. \
+\
+
+\b 3). Will this SELECT work?
+\b0 \
+\pard\pardeftab720\ri720
+\cf0    
+\b                NAME, AVG(SALARY), DEPARTMENT FROM PAY_TBL WHERE       DEPARTMENT = 'SWAT' ORDER BY NAME GROUP BY DEPARTMENT, SALARY;
+\b0 \
+\pard\pardeftab720\li720\ri720
+\cf0  \
+ \
+ Yes this will work \
+\
+\pard\pardeftab720\li720\ri720
+
+\b \cf0 4). When using the HAVING clause, do you always have to use a GROUP BY also?
+\b0 \
+        \
+No you do not, it may or may not use it. \
+   \
+\
+
+\b 5). Can you use ORDER BY on a column that is not one of the columns in the SELECT statement?
+\b0 \
+	\
+Yes because SQL allows you to link with other databases \
+        \
+\
+
+\b 6). Using the ORGCHART table from the following examples, find out how many people on each team have 30 or more days of sick leave.
+\b0 \
+  \
+The output will output 5 teams because that is the amount that has 30 or more sick days. \
+}
